@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <title>Owner Dashboard - 3D Rating Charts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body class="p-6">
+
+  <div class="max-w-7xl mx-auto space-y-6">
+    <!-- Floating Island Top Bar -->
+    <header class="floating-topbar px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-amber-600 text-white flex items-center justify-center font-bold">O</div>
+        <span class="font-bold text-slate-900">Executive Suite</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-2 bg-slate-200/50 p-1.5 rounded-full text-xs font-semibold">
+        <a href="#" class="px-4 py-2 bg-slate-900 text-white rounded-full shadow-sm">Overview & 3D Charts</a>
+        <a href="#" class="px-4 py-2 text-slate-600 hover:text-slate-900">Senarai Penyelia</a>
+      </nav>
+      <button onclick="window.location.href='../login/login.html'" class="px-4 py-2 rounded-xl bg-rose-50 text-rose-600 text-xs font-bold hover:bg-rose-100 transition">Log Keluar</button>
+    </header>
+
+    <!-- Action Bar -->
+    <div class="neu-card p-6 flex flex-wrap justify-between items-center gap-4">
+      <div>
+        <h1 class="text-xl font-extrabold text-slate-900">Pemantauan & Analitik Prestasi</h1>
+        <p class="text-xs text-slate-500 mt-0.5">Paparan 3D interaktif taburan penilaian kriteria keseluruhan.</p>
+      </div>
+      <button class="bg-amber-600 hover:bg-amber-700 text-white font-bold px-5 py-3 rounded-2xl shadow-lg transition text-xs">
+        🔔 Hantar Peringatan Pukal Penyelia
+      </button>
+    </div>
+
+    <!-- 3D Interactive Rating Charts Showcase Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      
+      <!-- 3D Chart Showcase Box -->
+      <div class="neu-card p-8 lg:col-span-7 flex flex-col justify-between perspective-1000">
+        <div class="flex justify-between items-center mb-6">
+          <div>
+            <h3 class="font-bold text-base text-slate-900">📊 3D Rating Criteria Breakdown</h3>
+            <p class="text-xs text-slate-500">Himpunan purata markah mengikut kriteria utama staf.</p>
+          </div>
+          <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-xl">QTR 4 Active</span>
+        </div>
+
+        <!-- 3D Transform Container -->
+        <div class="transform-3d my-8 p-6 neu-card-inset grid grid-cols-5 gap-4 items-end h-64">
+          <div class="flex flex-col items-center gap-2 h-full justify-end">
+            <span class="text-xs font-bold text-blue-600">4.6</span>
+            <div class="w-full bg-blue-600 rounded-t-xl shadow-lg" style="height: 85%;"></div>
+            <span class="text-[10px] font-bold text-slate-600 uppercase">Kualiti</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 h-full justify-end">
+            <span class="text-xs font-bold text-cyan-600">4.2</span>
+            <div class="w-full bg-cyan-500 rounded-t-xl shadow-lg" style="height: 75%;"></div>
+            <span class="text-[10px] font-bold text-slate-600 uppercase">Masa</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 h-full justify-end">
+            <span class="text-xs font-bold text-emerald-600">4.9</span>
+            <div class="w-full bg-emerald-500 rounded-t-xl shadow-lg" style="height: 95%;"></div>
+            <span class="text-[10px] font-bold text-slate-600 uppercase">Team</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 h-full justify-end">
+            <span class="text-xs font-bold text-amber-600">4.0</span>
+            <div class="w-full bg-amber-500 rounded-t-xl shadow-lg" style="height: 65%;"></div>
+            <span class="text-[10px] font-bold text-slate-600 uppercase">Inisiatif</span>
+          </div>
+          <div class="flex flex-col items-center gap-2 h-full justify-end">
+            <span class="text-xs font-bold text-indigo-600">4.5</span>
+            <div class="w-full bg-indigo-500 rounded-t-xl shadow-lg" style="height: 80%;"></div>
+            <span class="text-[10px] font-bold text-slate-600 uppercase">Komunikasi</span>
+          </div>
+        </div>
+
+        <div class="text-center text-xs text-slate-400 italic">
+          * Gerakkan tetikus di atas kad untuk melihat perubahan perspektif 3D kriteria markah.
+        </div>
+      </div>
+
+      <!-- Supervisors Quick Audit List -->
+      <div class="neu-card p-6 lg:col-span-5 flex flex-col justify-between space-y-4">
+        <div>
+          <h3 class="font-bold text-base text-slate-900 mb-1">👨‍💼 Status Penyelia</h3>
+          <p class="text-xs text-slate-500 mb-4">Senarai tugasan penilaian tertunggak.</p>
+        </div>
+        <div class="space-y-3" id="supervisorList">
+          <div class="neu-card-inset p-4 flex justify-between items-center text-xs">
+            <div>
+              <div class="font-bold text-slate-800">Encik Razak</div>
+              <div class="text-amber-600 mt-0.5">2 Penilaian Belum Selesai</div>
+            </div>
+            <button class="px-3 py-1.5 bg-slate-900 text-white rounded-lg font-bold">Ingatkan</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

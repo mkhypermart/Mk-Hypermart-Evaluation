@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg-base: #edf2f7;
+  --surface: #f8fafc;
+  --neumorph-shadow: 9px 9px 16px #cbd5e1, -9px -9px 16px #ffffff;
+  --neumorph-inset: inset 4px 4px 8px #cbd5e1, inset -4px -4px 8px #ffffff;
+  --primary: #0f172a;
+  --accent: #3b82f6;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-base);
+  color: var(--primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Soft Neumorphic Card */
+.neu-card {
+  background: var(--surface);
+  box-shadow: var(--neumorph-shadow);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 28px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neu-card-inset {
+  background: var(--surface);
+  box-shadow: var(--neumorph-inset);
+  border-radius: 20px;
+}
+
+/* Floating Island Top Bar */
+.floating-topbar {
+  background: rgba(248, 250, 252, 0.85);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 9999px;
+}
+
+/* 3D Perspective Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.transform-3d {
+  transform-style: preserve-3d;
+  transform: rotateX(8deg) rotateY(-10deg);
+  transition: transform 0.5s ease;
+}
+.transform-3d:hover {
+  transform: rotateX(0deg) rotateY(0deg);
+}

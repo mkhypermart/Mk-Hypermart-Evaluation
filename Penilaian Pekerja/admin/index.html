@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard - Sistem Penilaian</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body class="p-6">
+
+  <div class="max-w-7xl mx-auto space-y-6">
+    <!-- Floating Island Top Bar -->
+    <header class="floating-topbar px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-bold">A</div>
+        <span class="font-bold text-slate-900">Admin Portal</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-2 bg-slate-200/50 p-1.5 rounded-full text-xs font-semibold">
+        <a href="#" class="px-4 py-2 bg-slate-900 text-white rounded-full shadow-sm">Kriteria Soalan</a>
+        <a href="#" class="px-4 py-2 text-slate-600 hover:text-slate-900">Staf Belum Dinilai</a>
+      </nav>
+      <button onclick="window.location.href='../login/login.html'" class="px-4 py-2 rounded-xl bg-rose-50 text-rose-600 text-xs font-bold hover:bg-rose-100 transition">Log Keluar</button>
+    </header>
+
+    <!-- Main Content Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="neu-card p-6 md:col-span-2 space-y-4">
+        <h2 class="font-bold text-base text-slate-900">✏️ Tambah Kriteria Penilaian Baharu</h2>
+        <form class="flex gap-3">
+          <input type="text" placeholder="Masukkan soalan penilaian baharu..." class="neu-card-inset flex-1 px-4 py-3 text-sm outline-none">
+          <button type="submit" class="bg-slate-900 text-white px-6 py-3 rounded-xl font-bold text-xs shadow-md hover:bg-slate-800 transition">Tambah</button>
+        </form>
+        <div class="mt-6 space-y-3" id="questionsList">
+          <!-- Sample Question Item -->
+          <div class="neu-card-inset p-4 flex justify-between items-center text-sm">
+            <span>1. Kualiti dan Ketepatan Hasil Kerja</span>
+            <span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-lg">Aktif</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="neu-card p-6 space-y-4">
+        <h2 class="font-bold text-base text-slate-900">⏳ Staf Belum Dinilai</h2>
+        <div class="space-y-3 text-xs">
+          <div class="neu-card-inset p-3.5">
+            <div class="font-bold text-slate-800">Siti Aminah (EMP-002)</div>
+            <div class="text-slate-500 mt-0.5">Jabatan: Pemasaran</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

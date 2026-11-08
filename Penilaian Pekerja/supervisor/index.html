@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <title>Supervisor Portal - Penilaian Staf</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body class="p-6">
+
+  <div class="max-w-4xl mx-auto space-y-6">
+    <!-- Floating Island Top Bar -->
+    <header class="floating-topbar px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-emerald-700 text-white flex items-center justify-center font-bold">S</div>
+        <span class="font-bold text-slate-900">Supervisor Hub</span>
+      </div>
+      <span class="px-3.5 py-1.5 bg-emerald-100 text-emerald-800 text-xs font-bold rounded-full">0 Notifikasi</span>
+      <button onclick="window.location.href='../login/login.html'" class="px-4 py-2 rounded-xl bg-rose-50 text-rose-600 text-xs font-bold hover:bg-rose-100 transition">Log Keluar</button>
+    </header>
+
+    <!-- Search Staff by ID Card -->
+    <div class="neu-card p-6 space-y-4">
+      <h2 class="font-bold text-base text-slate-900">🔍 Cari Pekerja Mengikut ID Pekerja</h2>
+      <div class="flex gap-3">
+        <input type="text" id="employeeId" placeholder="Contoh: EMP-002" class="neu-card-inset flex-1 px-4 py-3 text-sm uppercase font-mono outline-none">
+        <button class="bg-emerald-700 hover:bg-emerald-800 text-white font-bold px-6 py-3 rounded-xl shadow-lg transition text-xs">Cari Staf</button>
+      </div>
+    </div>
+
+    <!-- Evaluation Form Card (Hidden by default or ready) -->
+    <div class="neu-card p-8 space-y-6">
+      <h3 class="font-bold text-lg text-slate-900 pb-3 border-b border-slate-200">Borang Penilaian: Siti Aminah (EMP-002)</h3>
+      <form class="space-y-5">
+        <div class="neu-card-inset p-4 space-y-2">
+          <label class="block text-xs font-bold uppercase text-slate-700">1. Kualiti dan Ketepatan Hasil Kerja</label>
+          <div class="flex gap-4 text-xs font-bold">
+            <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="q1" value="1"> 1</label>
+            <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="q1" value="2"> 2</label>
+            <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="q1" value="3"> 3</label>
+            <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="q1" value="4"> 4</label>
+            <label class="flex items-center gap-1 cursor-pointer"><input type="radio" name="q1" value="5" checked> 5</label>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase text-slate-600 mb-2">Ulasan & Catatan Prestasi Keseluruhan</label>
+          <textarea rows="3" class="neu-card-inset w-full p-4 text-sm outline-none" placeholder="Tulis ulasan konstruktif..."></textarea>
+        </div>
+
+        <button type="submit" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-4 rounded-2xl shadow-xl transition text-sm">
+          Hantar Keputusan Penilaian
+        </button>
+      </form>
+    </div>
+
+  </div>
+
+</body>
+</html>
